@@ -31,7 +31,7 @@ Firstly clone this repository
 go to yolov5 directory
 
 ```bash
-  cd yolov5
+  cd yolov5_frrcnn_deepsort/yolov5
 ```
 
 run
