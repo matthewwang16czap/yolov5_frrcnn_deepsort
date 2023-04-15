@@ -1,23 +1,12 @@
-# Understanding Multiple Object Tracking using DeepSORT
+This directory mainly follows codes from the article [Understanding Multiple Object Tracking using DeepSORT](https://learnopencv.com/understanding-multiple-object-tracking-using-deepsort/)
 
-This directory contains code for the article [Understanding Multiple Object Tracking using DeepSORT](https://learnopencv.com/understanding-multiple-object-tracking-using-deepsort/)
+For assignment reasons I have to modify the yolov5's inference codes and instead of using yolov5 model I use Faster RCNN model from pytorch.
 
-
-[<img src="https://learnopencv.com/wp-content/uploads/2022/07/download-button-e1657285155454.png" alt="Download Code" width="200">](https://www.dropbox.com/sh/9b950v9rpe70pr0/AAAeXNIf21ZBxkMBtVc69XDqa?dl=1)
-
-<img src="https://learnopencv.com/wp-content/uploads/2022/06/04-football-demo.gif" alt="Multiple Object Tracking using DeepSort" width="800">
-
-# AI Courses by OpenCV
-
-Want to become an expert in AI? [AI Courses by OpenCV](https://opencv.org/courses/) is a great place to start. 
-
-<a href="https://opencv.org/courses/">
-<p align="center"> 
-<img src="https://learnopencv.com/wp-content/uploads/2023/01/AI-Courses-By-OpenCV-Github.png">
-</p>
-</a>
+The codes specifically for football-video.mp4 because I ignore all COCO labels except person and sports ball, but you can fit your own labels.
 
 to run:
 
-python frrcnn_track.py --weights yolov5l.pt  --img 640  --source ./football-video.mp4 --save-txt --classes 0 32 --line-thickness 1
+python frrcnn_track.py  --img 640  --source ./football-video.mp4 --save-txt --classes 0 32 --line-thickness 1
+
+results are saved in /Runs
 
